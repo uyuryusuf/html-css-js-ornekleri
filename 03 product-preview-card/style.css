@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3eae3;
+}
+
+.card {
+  width: 100%;
+  max-width: 460px;
+  height: 345px;
+  display: flex;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    height: 565px;
+    max-width: 316px;
+  }
+
+  .img {
+    width: 234px;
+    height: 100%;
+    background-image: url("./images/image-product-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media screen and (max-width: 768px) {
+      background-image: url("./images/image-product-mobile.jpg");
+      width: 316px;
+      height: 222px;
+    }
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 12px;
+    width: 226px;
+    height: 100%;
+    background-color: #fff;
+
+    @media screen and (max-width: 768px) {
+      width: 316px;
+      height: 347px;
+    }
+
+    .name {
+      letter-spacing: 3px;
+      font-size: 12px;
+      color: #939297;
+      font-weight: 600;
+    }
+
+    .header {
+      font-size: 32px;
+      word-spacing: -4px;
+    }
+
+    .description {
+      font-size: 12px;
+      color: #7e7d82;
+      font-weight: 600;
+    }
+    .price {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @media screen and (max-width: 768px) {
+        margin-right: 90px;
+      }
+
+      .new-price {
+        font-size: 32px;
+        color: #3d7862;
+      }
+      .old-price {
+        font-size: 12px;
+        margin-right: 20px;
+        color: #818284;
+        font-weight: bold;
+      }
+    }
+    .btn-wrapper {
+      display: flex;
+      justify-content: center;
+      background-color: #3f806a;
+      padding: 10px;
+      border-radius: 5px;
+      color: #fff;
+      gap: 8px;
+      border: none;
+
+      &:hover {
+        background-color: #184131;
+        cursor: pointer;
+        transition: background-color 5s ease;
+      }
+    }
+  }
+}
