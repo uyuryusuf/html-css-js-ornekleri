@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0d1a2d;
+}
+
+.nft-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #15273f;
+  width: 100%;
+  height: 100%;
+  max-height: 450px;
+  max-width: 250px;
+  border-radius: 5px;
+
+  .content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+    .name {
+      color: #fdfcfe;
+      font-size: 15px;
+    }
+
+    .img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .description {
+      color: #899fbf;
+      font-size: 12px;
+    }
+
+    .crypto-timer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .amount-content {
+        display: flex;
+        align-items: center;
+        width: 100px;
+        gap: 10px;
+        color: #28e7e7;
+
+        .amount {
+          font-size: 10px;
+        }
+      }
+      .timer-left-content {
+        color: #899fbf;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        width: 100px;
+        gap: 10px;
+        font-size: 10px;
+      }
+    }
+    .line {
+      color: #2f4159;
+      opacity: 0.2;
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      .avatar {
+        border-radius: 50%;
+        width: 25px;
+        border: solid 1px #fff;
+      }
+      .info {
+        color: #899fbf;
+        font-size: 12px;
+      }
+    }
+  }
+}
