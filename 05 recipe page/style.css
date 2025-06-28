@@ -1,0 +1,168 @@
+:root {
+  /* Colors */
+  --white: hsl(0, 0%, 100%);
+
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+
+  --brown-800: hsl(14, 45%, 36%);
+
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+
+  /* Typography */
+  --font-size-base: 16px;
+  --font-family-heading: "Young Serif", serif;
+  --font-family-body: "Outfit", sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Layout Breakpoints */
+  --breakpoint-mobile: 375px;
+  --breakpoint-desktop: 1440px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--stone-600);
+}
+
+.line {
+  margin-top: 25px;
+  width: 100%;
+  height: 0.07px;
+  opacity: 0.5;
+  background-color: var(--brown-800);
+}
+
+li::marker {
+  color: var(--rose-800);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(29, 53%, 90%);
+  font-family: var(--font-family-body);
+}
+
+.container {
+  background-color: var(--rose-50);
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+
+  .img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .header {
+    color: var(--stone-900);
+    width: 100%;
+    margin: 20px 0;
+    font-family: var(--font-family-heading);
+  }
+  .description {
+    padding: 5px;
+  }
+
+  .preparation-list {
+    width: 90%;
+    margin-top: 40px;
+    font-size: var(--font-size-base);
+    list-style-position: inside;
+
+    .list-title {
+      font-weight: var(--font-weight-bold);
+      margin-bottom: 20px;
+      color: var(--rose-800);
+    }
+
+    .list-item::before {
+      content: " ";
+      margin-left: 15px;
+      color: var(--brown-800);
+    }
+    .list-item .title {
+      font-weight: var(--font-weight-bold);
+    }
+  }
+
+  .ingredients-list {
+    width: 90%;
+    margin-top: 40px;
+    font-size: var(--font-size-base);
+    list-style-position: inside;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .list-title {
+      font-weight: var(--font-weight-bold);
+      color: var(--rose-800);
+      margin-bottom: 20px;
+    }
+  }
+
+  .instructions-list {
+    list-style-position: inside;
+    list-style-type: decimal;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .list-title {
+      font-size: 30px;
+      color: var(--rose-800);
+      margin: 20px 0;
+    }
+    .list-item {
+      .title {
+        font-weight: var(--font-weight-bold);
+      }
+    }
+    .list-item::before {
+      content: " ";
+      margin-left: 15px;
+    }
+  }
+
+  .nutrition {
+    display: flex;
+    flex-direction: column;
+
+    .nutrition-table {
+      border-collapse: collapse;
+
+      td {
+        padding: 16px;
+      }
+
+      tr + tr {
+        border-top: 0.5px solid var(--stone-150);
+      }
+    }
+
+    .nutrition-title {
+      color: var(--rose-800);
+      margin-bottom: 20px;
+    }
+    .nutrition-description {
+      margin-bottom: 10px;
+    }
+  }
+}
