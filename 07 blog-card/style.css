@@ -1,0 +1,168 @@
+@font-face {
+    font-family: "FigTree";
+    src: url("./assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype") ;
+    font-weight: 100 900;
+    font-display: swap;
+
+}
+
+:root{
+    /*Colors*/
+    --clr-yellow:#f4d04d;
+    --clr-gray-950:#111111,
+    --clr-gray-500:#6b6b6b;
+    --clr-white:#ffffff;
+
+    /* font:  */
+    --ff-figtree:"FigTree", system-ui,sans-serif;
+
+    /* font size */
+    --fs-xl:2.5rem;
+    --fs-lg:1.25rem;
+    --fs-md:1rem;
+    --fs-sm:.875rem;
+    --fs-sx:.75rem;
+
+    /* font-weight */
+
+    --fw-medium:500;
+    --fw-extra-bold:800;
+
+    /* spacing */
+
+    --sp-24:1.5rem;
+    --sp-12:0.75rem;
+    --sp-8:0.5rem;
+}
+
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  background-color: var(--clr-yellow);
+  color: var(--clr-gray-950);
+  font-size: var(--fs-md);
+  font-family: var(--ff-figtree);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+    scroll-behavior: s;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+
+.card-wrapper{
+  max-width: 384px;
+  border-radius: 20px;
+  border: 1px solid black;
+  padding: var(--sp-24);
+  background-color: var(--clr-white);
+  box-shadow: 10px 10px black;
+
+  @media screen and (max-width:30rem) {
+    margin-inline: var(--sp-24);
+  }
+
+  .card-image{
+    border-radius: 10px;
+  }
+
+  & .card-content{
+    margin-block: var(--sp-24);
+
+    & .category{
+    width: fit-content;
+    border-radius: 4px;
+    background-color: var(--clr-yellow);
+    padding: 4px 12px;
+    font-weight: var(--fw-extra-bold);
+    font-size: var(--fs-sm);
+
+    @media screen and(max-width:30rem) {
+      font-size: var(--fs-sx);
+      
+    }
+  }
+
+    &  .publish-date{
+    margin-block:var(--sp-12) ;
+    font-size: var(--fs-sm);
+
+     @media screen and(max-width:30rem) {
+      font-size: var(--fs-sx);
+      
+    }
+  }
+
+    & .title{
+     font-size: var(--fs-xl);
+     font-weight: var(--fw-extra-bold);
+
+      @media screen and(max-width:30rem) {
+      font-size: var(--fs-lg);
+    }
+
+    & .descriptions{
+      font-size: var(--fs-md);
+      color: var(--clr-gray-500);
+
+       @media screen and(max-width:30rem) {
+      font-size: var(--fs-sm);
+      
+    }
+    }
+   }
+  }
+
+  & .user{
+    display: flex;
+    align-items: center;
+    gap: var(--sp-12);
+
+    & .user-name{
+      font-size: var(--fs-sm);
+      font-weight: var(--fw-extra-bold);
+    }
+  }
+
+}
